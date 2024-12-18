@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 
-const URL = process.env.APP_URL
+
 
 test.beforeEach(async ({ page }) => {
-  await page.goto(URL);
+  await page.goto("https://fe-delivery.tallinn-learning.ee/signin");
 })
 test('Check for incorrect credentials message and close pop up message', async ({ page }) => {
   const usernameField = page.getByTestId("username-input")
